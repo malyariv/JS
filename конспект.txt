@@ -282,6 +282,34 @@ string.match(pattern) => [Something,to,practice]
 string.search(pattern) => 0
 __________________________________________________________________________
 
-БРАУЗЕР
+РАБОТА В БРАУЗЕРЕ
+
+Окна и вывод
 alert("") // confirm("") // promt("")
-document.write("") - вывод текста на станицу
+document.write("") - вывод текста на страницу
+
+Выбор элемента на странице
+let box = document.getElementById("box"),                	- получить один элемент по уникалному id
+	btn = document.getElementsByTagName("button"),			- получить псевдомассив по тегу
+	circle = document.getElementsByClassName("circle"),		- получить псевдомассив по имени класса
+	heart = document.querySelectorAll(".heart"),			- получить псевдомассив по запросу, указав имя класса после точки, тегу в ..., id ...
+	singleHeart = document.querySelector(".heart");			- полу первый элемент на странице по запросу
+
+Создание элемента
+let div = document.createElement("div"),                    - создаст пару тегов div
+    text = document.createTextNode("Some text");            - создаст объект с текстом
+
+Работа со стилями
+box.style.backgroundColor = "green";                        - изменить свойство стиля
+btn[1].style.borderRadius = "100%";                         - изменить свойство стиля
+div.classList.add("black");                                 - добавить стиль к элементу
+
+Работа с элементами на странице
+document.body.appendChild(div);                             - добавить элемент в конец элемента (тут body)
+document.body.insertBefore(что, перед чем)                  - добавить элемент перед другим внутри тега body
+document.body.removeChild(что)                              - удалить элемент из родительского тега (тут body)
+document.body,replaceChild(new, old)                        - заменить элемент
+div.innerHTML = "<h1>Hello World!</h1>"                     - вставка HTML-верстки внутрь тега. 
+div.textContent = "<h1>Hello World!</h1>"                   - вставка HTML-верстки внутрь тега. 
+
+
