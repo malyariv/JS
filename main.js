@@ -1,7 +1,6 @@
 "use strict";
 
-let box = document.getElementById("box"),
-	btn = document.getElementsByTagName("button"),
-	circle = document.getElementsByClassName("circle"),
-	heart = document.querySelectorAll(".heart"),
-	singleHeart = document.querySelector(".heart");
+let timerId = setTimeout(()=>alert("Hello"), 3000);
+
+event.target.tagName == "BUTTON";
+event.target.classList.contains('class')
